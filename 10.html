@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    function check(){
+      var username = document.getElementById("username").value;
+      var password = document.getElementById("password").value;
+      var confirmPassword = document.getElementById("confirmPassword").value;
+      if(username === "admin" && password === "Ankit123" && password === confirmPassword){
+        alert("Registration successful !");
+        return true;
+      }
+      else{
+        alert("Invalid username or password or confirm passwords do not match");
+        return false;
+      }
+    }
+</script>
+<body>
+    <form action="submit.html" method="post" onsubmit="return check()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" placeholder="Enter your name"><br><br>
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" placeholder="Enter your password"><br><br>
+        <label for="confirmPassword">Confirm Password:</label>
+        <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password"><br><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
