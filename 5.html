@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pattern</title>
+</head>
+<body>
+    <p id="pattern"></p>
+    <script>
+    // var n=5;
+    // for(var i=1;i<=n;i++){
+    //     for(var j=1;j<=i;j++){
+    //         document.write("*");        
+    //     }
+    //     document.write("<br>");
+    // }
+     var n=5;
+     for(var i=1;i<=n;i++){
+        var output = "";
+        for(var j=1;j<=i;j++){
+           output += j;
+        }
+        for(var k=i-1;k>=1;k--){
+            output += k;
+        }
+        document.getElementById("pattern").innerHTML += output + "<br>";
+    }
+    </script>
+</body>
+</html>
